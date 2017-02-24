@@ -56,7 +56,7 @@
 
             </tbody>
         </table>
-        <a href="{{url('/Golongan/create')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Golongan</a>
+        <a href="{{url('/Penggajian/create')}}" class="btn btn-success"><span class="glyphicon glyphicon-plus" aria-hidden="true"></span> Penggajian</a>
                 </div>
             </div>
         </div>

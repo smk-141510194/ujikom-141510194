@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Penggajian;
 use App\Pegawai;
 use App\Jabatan;
 use App\Golongan;
@@ -20,25 +20,8 @@ class PenggajianController extends Controller
      */
     public function index()
     {
-       {
-        if (isset($_GET['search'])) {
-            $data = Pegawai::where($_GET['field'],'LIKE','%'.$_GET['search'].'%')->with('user','Jabatan','Golongan')->orderBy($_GET['field'])->paginate(100);
-            $search = $_GET['search'];
-            $field_old = $_GET['field'];
-        }
-        else if(isset($_GET['sortBy']))
-        {
-            $data = Pegawai::with('user','Jabatan','Golongan')->orderBy($_GET['sortBy'])->paginate(5);
-        }
-        else{
-            $data = Pegawai::with('user','Jabatan','Golongan')->orderBy('created_at','DESC')->paginate(5);
-        }
-        $fields = (['nip']);
-        // dd($datas);
-
-        return view('Pegawai.index', compact('data','fields','search','field_old'));
-    }
-
+       $Penggajian = Penggajian::all();
+        return view('Penggajian.index',compact('Penggajian'));  
     }
 
     /**

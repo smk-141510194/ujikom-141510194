@@ -41,6 +41,10 @@ class Kernel extends HttpKernel
             'bindings',
         ],
     ];
+    protected function formatValidationErrors(Validator $validator)
+{
+    return $validator->errors()->all();
+}
 
     /**
      * The application's route middleware.
