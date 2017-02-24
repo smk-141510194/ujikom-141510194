@@ -3,10 +3,7 @@
 namespace App\Http\Controllers;
 
 use Request;
-use App\Article;
-use Carbon\Carbon;
 use App\Jabatan;
-use Validator;
 class JabatanController extends Controller
 {
     /**
@@ -47,19 +44,7 @@ class JabatanController extends Controller
     public function store(Request $request)
     {
         
-        $Kode_Jabatan = Validator::make($request->all(), [
-        'title' => 'required|unique|max:255',
-        'body' => 'required',
-    ]);
-
-    if ($Kode_Jabatan->fails())
-    {
-        return redirect()->back()->withErrors($Kode_Jabatan->errors());
-    }
-
-
-
-
+     
         $Jabatan=Request::all();
         Jabatan::create($Jabatan);
         return redirect('Jabatan');

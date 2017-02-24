@@ -83,7 +83,7 @@
 
 <!--Footer-part-->
 
-<div class="row-fluid">
+<div class="row-fluid"><br><br><br><br>
  <center> <div id="footer" class="span12"> UJIKOM SMK ASSALAAM  by <a href="https://www.facebook.com/epidmahpudin">Epid Mahpudin</a> </div></center>
 </div>
 

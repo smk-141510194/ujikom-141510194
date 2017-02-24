@@ -3,7 +3,8 @@
 @section('content')
 <div class="container">
     <div class="row">
-        <div class="col-md-10 offset-md-2">
+    <br><br><br><br>
+        <div class="col-md-15 offset-md-2">
             <div class="panel panel-primary">
                 <div class="panel-heading">     
                 <h7><font face="Maiandra GD" color="white"><center>Table Penggajian</center></font></h7>
